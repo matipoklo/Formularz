@@ -13,25 +13,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
         findViewById<Button>(R.id.button).setOnClickListener {
-            val alert = CustomAlert()
-            val kobieta = findViewById<RadioButton>(R.id.radioButton)
-            val mezczyzna = findViewById<RadioButton>(R.id.radioButton4)
-            val wiek = findViewById<EditText>(R.id.editTextNumber).toString().toInt()
-            val sport = findViewById<CheckBox>(R.id.checkBox)
-            val turystyka = findViewById<CheckBox>(R.id.checkBox2)
-            val muzyka = findViewById<CheckBox>(R.id.checkBox3)
-            val gry = findViewById<CheckBox>(R.id.checkBox4)
-
-            findViewById<Button>(R.id.button).setOnClickListener(){
-
+                val alert = CustomAlert()
+                alert.showDialog(this,"Welcome to Warmodroid !!!")
             }
-
-
-            alert.showDialog(this,)
         }
     }
-}
+
 class CustomAlert {
 
     fun showDialog(activity: Activity?, msg: String?) {
