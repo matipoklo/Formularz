@@ -7,9 +7,7 @@ import android.app.Dialog
 import android.provider.MediaStore
 import android.view.View
 import android.view.Window
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.TextView
+import android.widget.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +17,17 @@ class MainActivity : AppCompatActivity() {
             val alert = CustomAlert()
             val kobieta = findViewById<RadioButton>(R.id.radioButton)
             val mezczyzna = findViewById<RadioButton>(R.id.radioButton4)
+            val wiek = findViewById<EditText>(R.id.editTextNumber).toString().toInt()
+            val sport = findViewById<CheckBox>(R.id.checkBox)
+            val turystyka = findViewById<CheckBox>(R.id.checkBox2)
+            val muzyka = findViewById<CheckBox>(R.id.checkBox3)
+            val gry = findViewById<CheckBox>(R.id.checkBox4)
+
+            findViewById<Button>(R.id.button).setOnClickListener(){
+
+            }
+
+
             alert.showDialog(this,)
         }
     }
